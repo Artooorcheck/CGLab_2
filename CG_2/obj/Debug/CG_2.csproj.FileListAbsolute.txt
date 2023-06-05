@@ -1,0 +1,15 @@
+C:\Users\Артур\source\repos\CG_2\CG_2\bin\Debug\CG_2.exe.config
+C:\Users\Артур\source\repos\CG_2\CG_2\bin\Debug\CG_2.exe
+C:\Users\Артур\source\repos\CG_2\CG_2\bin\Debug\CG_2.pdb
+C:\Users\Артур\source\repos\CG_2\CG_2\bin\Debug\ClassLibrary.dll
+C:\Users\Артур\source\repos\CG_2\CG_2\bin\Debug\ClassLibrary.pdb
+C:\Users\Артур\source\repos\CG_2\CG_2\obj\Debug\CG_2.csproj.AssemblyReference.cache
+C:\Users\Артур\source\repos\CG_2\CG_2\obj\Debug\CG_2.Form1.resources
+C:\Users\Артур\source\repos\CG_2\CG_2\obj\Debug\CG_2.Properties.Resources.resources
+C:\Users\Артур\source\repos\CG_2\CG_2\obj\Debug\CG_2.csproj.GenerateResource.cache
+C:\Users\Артур\source\repos\CG_2\CG_2\obj\Debug\CG_2.csproj.CoreCompileInputs.cache
+C:\Users\Артур\source\repos\CG_2\CG_2\obj\Debug\CG_2.csproj.CopyComplete
+C:\Users\Артур\source\repos\CG_2\CG_2\obj\Debug\CG_2.exe
+C:\Users\Артур\source\repos\CG_2\CG_2\obj\Debug\CG_2.pdb
+C:\Users\Артур\source\repos\CG_2\CG_2\bin\Debug\Renderer.dll
+C:\Users\Артур\source\repos\CG_2\CG_2\bin\Debug\Renderer.pdb

@@ -1,0 +1,9 @@
+C:\Users\Артур\source\repos\CG_2\Renderer\bin\Debug\Renderer.dll
+C:\Users\Артур\source\repos\CG_2\Renderer\bin\Debug\Renderer.pdb
+C:\Users\Артур\source\repos\CG_2\Renderer\bin\Debug\ClassLibrary.dll
+C:\Users\Артур\source\repos\CG_2\Renderer\bin\Debug\ClassLibrary.pdb
+C:\Users\Артур\source\repos\CG_2\Renderer\obj\Debug\Renderer.csproj.AssemblyReference.cache
+C:\Users\Артур\source\repos\CG_2\Renderer\obj\Debug\Renderer.csproj.CoreCompileInputs.cache
+C:\Users\Артур\source\repos\CG_2\Renderer\obj\Debug\Renderer.csproj.CopyComplete
+C:\Users\Артур\source\repos\CG_2\Renderer\obj\Debug\Renderer.dll
+C:\Users\Артур\source\repos\CG_2\Renderer\obj\Debug\Renderer.pdb

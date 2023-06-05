@@ -1,0 +1,6 @@
+C:\Users\Артур\source\repos\CG_2\Transform\bin\Debug\ClassLibrary.dll
+C:\Users\Артур\source\repos\CG_2\Transform\bin\Debug\ClassLibrary.pdb
+C:\Users\Артур\source\repos\CG_2\Transform\obj\Debug\Transform.csproj.AssemblyReference.cache
+C:\Users\Артур\source\repos\CG_2\Transform\obj\Debug\Transform.csproj.CoreCompileInputs.cache
+C:\Users\Артур\source\repos\CG_2\Transform\obj\Debug\ClassLibrary.dll
+C:\Users\Артур\source\repos\CG_2\Transform\obj\Debug\ClassLibrary.pdb
