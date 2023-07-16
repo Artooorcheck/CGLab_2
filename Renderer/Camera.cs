@@ -2,7 +2,10 @@
 using CG_2.Render.Light.Interfaces;
 using Renderer.Layer;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.Windows.Forms;
 using Transform;
 
 namespace CG_2.Render
@@ -46,38 +49,64 @@ namespace CG_2.Render
             Distance = distance;
         }
 
-        public void Render(Graphics graphics, ILight light, IRenderer renderer)
+        public void LocalMove(Vector3 direction)
+        {
+            var ang = -_rotation.z;
+            Position += new Vector3 ((float)(Math.Sin(ang) * direction.y + Math.Cos(ang) *direction.x),
+                                     (float)(-Math.Sin(ang) * direction.x + Math.Cos(ang) * direction.y),
+                                     direction.z);
+        }
+
+        public void Render(PictureBox picture, ILight light, IRenderer renderer)
         {
             var up = Up;
             var forward = Forward;
             var right = Right;
             DateTime time = DateTime.Now;
             var ang = FieldOfView * Mathf.PI / 360;
-            var upAng = ang / graphics.VisibleClipBounds.Width * graphics.VisibleClipBounds.Height;
-            var deltaRight = right * Mathf.Sin(ang) / graphics.VisibleClipBounds.Width * 2;
-            var deltaUp = up * Mathf.Sin(upAng) / graphics.VisibleClipBounds.Height * 2;
+            var upAng = ang / picture.Width * picture.Height;
+            var deltaRight = right * Mathf.Sin(ang) / picture.Width * 2;
+            var deltaUp = up * Mathf.Sin(upAng) / picture.Height * 2;
             var startDir = Forward * Mathf.Cos(ang) - Right * Mathf.Sin(ang) + Up * Mathf.Sin(upAng);
-            graphics.Clear(Color.Black);
-            var pen=new Pen(Color.Black);
-            for (int x = 0; x < graphics.VisibleClipBounds.Width; x++)
+
+            Bitmap bmp = new Bitmap(picture.Width, picture.Height);
+            BitmapData bmd = bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height),
+                                  ImageLockMode.ReadWrite,
+                                  bmp.PixelFormat);
+
+            unsafe
             {
-                var dirY = startDir;
-                for (int y = 0; y < graphics.VisibleClipBounds.Height; y++)
+                for (int y = 0; y < bmd.Height; y++)
                 {
-                    if(renderer.Raycast(Position, dirY, out HitInfo hitInfo))
+                    byte* row = (byte*)bmd.Scan0 + (y * bmd.Stride);
+                    var dirY = startDir;
+                    int PixelSize = 4;
+
+                    for (int x = 0; x < bmd.Width; x++)
                     {
-                        pen.Color = hitInfo.Color;
-                        pen.Color = light.CalculateVertexColor(hitInfo.Point, hitInfo.Normal, hitInfo.Color);
-                        graphics.DrawRectangle(pen, x, y, 1, 1);
+                        if (renderer.Raycast(Position, dirY, out HitInfo hitInfo))
+                        {
+                            var color = light.CalculateVertexColor(hitInfo.Point, hitInfo.Normal, hitInfo.Color);
+                            row[x * PixelSize] = color.B; 
+                            row[x * PixelSize + 1] = color.G; 
+                            row[x * PixelSize + 2] = color.R; 
+                            row[x * PixelSize + 3] = color.A;
+                        }
+                        else
+                        {
+                            row[x * PixelSize] = 0;
+                            row[x * PixelSize + 1] = 0;
+                            row[x * PixelSize + 2] = 0;
+                            row[x * PixelSize + 3] = 255;
+                        }
+                        dirY += deltaRight;
                     }
-                    dirY -= deltaUp;
+                    startDir -= deltaUp;
                 }
-                startDir += deltaRight;
             }
-            //graphics.DrawRectangle(pen, 93, 93, 3,3);
-            double t = (DateTime.Now - time).TotalSeconds;
-            Console.WriteLine(t);
-            //if (renderer.Raycast(Position, ))
+
+            bmp.UnlockBits(bmd);
+            picture.Image = bmp;
         }
     }
 }

@@ -7,3 +7,12 @@ C:\Users\Артур\source\repos\CG_2\Renderer\obj\Debug\Renderer.csproj.CoreCom
 C:\Users\Артур\source\repos\CG_2\Renderer\obj\Debug\Renderer.csproj.CopyComplete
 C:\Users\Артур\source\repos\CG_2\Renderer\obj\Debug\Renderer.dll
 C:\Users\Артур\source\repos\CG_2\Renderer\obj\Debug\Renderer.pdb
+D:\GitHub\CGLab_2\Renderer\bin\Debug\Renderer.dll
+D:\GitHub\CGLab_2\Renderer\bin\Debug\Renderer.pdb
+D:\GitHub\CGLab_2\Renderer\bin\Debug\ClassLibrary.dll
+D:\GitHub\CGLab_2\Renderer\bin\Debug\ClassLibrary.pdb
+D:\GitHub\CGLab_2\Renderer\obj\Debug\Renderer.csproj.AssemblyReference.cache
+D:\GitHub\CGLab_2\Renderer\obj\Debug\Renderer.csproj.CoreCompileInputs.cache
+D:\GitHub\CGLab_2\Renderer\obj\Debug\Renderer.csproj.CopyComplete
+D:\GitHub\CGLab_2\Renderer\obj\Debug\Renderer.dll
+D:\GitHub\CGLab_2\Renderer\obj\Debug\Renderer.pdb

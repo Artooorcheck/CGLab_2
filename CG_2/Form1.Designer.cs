@@ -29,9 +29,12 @@ namespace CG_2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Screen = new System.Windows.Forms.PictureBox();
-            this.Render = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.Screen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Screen
@@ -42,26 +45,31 @@ namespace CG_2
             this.Screen.TabIndex = 0;
             this.Screen.TabStop = false;
             // 
-            // Render
+            // pictureBox1
             // 
-            this.Render.Location = new System.Drawing.Point(668, 22);
-            this.Render.Name = "Render";
-            this.Render.Size = new System.Drawing.Size(75, 23);
-            this.Render.TabIndex = 1;
-            this.Render.Text = "RENDER";
-            this.Render.UseVisualStyleBackColor = true;
-            this.Render.Click += new System.EventHandler(this.Render_Click);
+            this.pictureBox1.Location = new System.Drawing.Point(104, 61);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(684, 377);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 20;
+            this.timer1.Tick += new System.EventHandler(this.Update);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.Render);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Screen);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.Screen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -69,7 +77,8 @@ namespace CG_2
         #endregion
 
         private System.Windows.Forms.PictureBox Screen;
-        private System.Windows.Forms.Button Render;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
